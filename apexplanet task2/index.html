@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Web Project</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <h1>Manage a task</h1>
+        <ul>
+            <li><a href="#form-section">Form</a></li>
+            <li><a href="#todo-section">To-Do List</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid-layout">
+        <!-- Form Section -->
+        <section id="form-section" class="card">
+            <h2>📨 Contact Form</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input type="email" id="email" placeholder="Your Email" required />
+                <input typr="message" id=" message" placeholder="new message..." required/>
+                <button type="submit">Submit</button>
+                <p id="formMsg"></p>
+            </form>
+        </section>
+
+        <!-- To-Do Section -->
+        <section id="todo-section" class="card">
+            <h2>✅ To-Do List</h2>
+            <div class="todo-inputs">
+                <input type="text" id="taskInput" placeholder="New Task..." />
+                <input type="datetime-local" id="reminderTime" />
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Easily Manage your daily usage</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</html>
