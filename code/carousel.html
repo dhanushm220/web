@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Quiz & API</title>
+</head>
+<video autoplay muted loop id="bg-video">
+    <source src="carousel bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+<h1> Travel gallery</h1>
+<div class="carousel">
+
+    <div class="carousel-slides">
+        <div class="carousel-slide"><img src="travel1.jpg" alt="Travel Image 1"></div>
+        <div class="carousel-slide"><img src="travel2.jpg" alt="Travel Image 2"></div>
+        <div class="carousel-slide"><img src="travel3.webp" alt="Travel Image 3"></div>
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<style>
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    h1 {
+        color: white;
+        text-align: center;
+    }
+    
+    .carousel {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 4px 8px white;
+        border-radius: 10px;
+    }
+    /* Carousel Slides */
+    
+    .carousel-slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carousel-slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .carousel-slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    /* Navigation Buttons */
+    
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    .prev {
+        left: 10px;
+        background-color: black;
+    }
+    
+    .next {
+        right: 10px;
+        background-color: black;
+    }
+    /* Dots */
+    
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .dot.active {
+        background-color: #717171;
+    }
+</style>
+<script src="script.js"></script>
+
+</html>

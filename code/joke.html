@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Quiz & API</title>
+</head>
+<video autoplay muted loop id="bg-video">
+    <source src="joke bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+<h2>Random Joke Generator</h2>
+<div class="api-section">
+
+    <button onclick="getJoke()">Get Joke</button>
+    <p id="jokeOutput">Click the button for a joke!</p>
+</div>
+<style>
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .api-section {
+        max-width: 1000px;
+        margin: auto;
+        color: white;
+        padding: 55px;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px white;
+    }
+    
+    h1,
+    h2,
+    p {
+        color: white;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+</style>
+<script src="script.js"></script>
+
+</html>

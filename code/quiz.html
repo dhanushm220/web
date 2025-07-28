@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Quiz & API</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>General knowledge Quiz</h1>
+    </header>
+
+    </div>
+
+    <main>
+        <video autoplay muted loop id="bg-video">
+    <source src="quiz bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+        <section class="quiz-section">
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. What does HTML stand for?</p>
+                    <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+                    <label><input type="radio" name="q1" value="b">  Home Tool Markup Language</label>
+                    <label><input type="radio" name="q1" value="c"> Hyperlinks and Text Markup Language</label>
+                </div>
+
+                <div class="question">
+                    <p>2. Which CSS property is used to change the text color of an element?</p>
+                    <label><input type="radio" name="q2" value="a"> font-color</label>
+                    <label><input type="radio" name="q2" value="b"> text-style</label>
+                    <label><input type="radio" name="q2" value="c"> color</label>
+                </div>
+
+                <div class="question">
+                    <p>3. Which keyword is used to declare a variable in JavaScript (ES6)?</p>
+                    <label><input type="radio" name="q3" value="a"> var</label>
+                    <label><input type="radio" name="q3" value="b"> int</label>
+                    <label><input type="radio" name="q3" value="c"> let</label>
+                </div>
+
+                <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+            </form>
+        </section>
+    </main>
+    <style>
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        
+        .quiz-section,
+        .api-section {
+            max-width: 700px;
+            margin: auto;
+            color: white;
+            text-align: justify;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px white;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        label {
+            display: block;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        
+        .correct {
+            background-color: #c8f7c5;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        .incorrect {
+            background-color: #f9c0c0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+
+</html>
