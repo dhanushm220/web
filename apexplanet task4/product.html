@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="index.html">About</a>
+        </nav>
+    </header>
+    <main class="product-section">
+        <h2>🎯 Filter Products</h2>
+        <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All</option>
+      <option value="tech">Tech</option>
+      <option value="apparel">Apparel</option>
+    </select>
+
+        <select id="sortFilter" onchange="filterProducts()">
+      <option value="price">Price</option>
+      <option value="rating">Rating</option>
+    </select>
+
+        <div id="products" class="grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
